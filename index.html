@@ -1,60 +1,92 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>Extra LinkTree</title>
-    <link rel="stylesheet" href="./styles.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="description" content="Eshan Nahar LinkTree" />
+    <meta name="author" content="Eshan Nahar" />
+    <meta name="keywords" content="Eshan, Nahar, Computer, Projects" />
+    <meta name="robots" content="index, follow" />
+    <!-- // -->
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
+    <title>LinkTree</title>
+    <link rel="stylesheet" href="./styles.css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
       integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
       crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Prata&display=swap"
+      rel="stylesheet">
   </head>
 
   <body class="2xl:text-[40px] xl:text-[30px] lg:text-[26px] text-white">
-    <main class="flex items-center justify-center h-[100%] z-5 flex-col mt-5">
+    <div id="welcome-screen"
+      class="flex justify-center items-center min-h-lvh flex-col bg-[rgba(0,0,0,.33)] backdrop-blur-lg border-2 border-[#333]">
+      <h2 id="welcome-text" class="text-4xl opacity-0 text-white">Welcome!</h2>
+    </div>
+    <main class="flex items-center justify-center h-[100%] z-5 flex-col mt-5 hidden">
       <header class="flex items-center justify-center z-5 flex-col">
-        <div class="avatar">
-          <img src="https://i.pinimg.com/736x/07/71/4f/07714f27254fd9a4771c3e604c7a62fd.jpg" alt="" class="w-[2em] h-[2em] rounded-[50%] drop-shadow" title="Random">
+        <div class="avatar h-[2.125em] grid place-items-center aspect-square">
+          <a href="#!" target="_blank"><img
+              src="https://i.pinimg.com/736x/07/71/4f/07714f27254fd9a4771c3e604c7a62fd.jpg" alt="Logo"
+              class="w-[2.125em] aspect-square rounded-[50%] drop-shadow object-fit" title="Some Image" width="52"
+              height="52" /></a>
         </div>
         <h1
-          class="font-['Prata'] text-transparent bg-clip-text bg-gradient-to-r from-[#fdfd69] via-[#4af645] to-[#a2bffe] text-[2em] mt-3">
-          Eshan</h1>
-        <h2 class="font-['Oswald'] font-[900] pt-2" style="font-variant: small-caps;">Undergraduate Student</h2>
-        <h3 style="color: #888;" class="xl:!text-base text-[.5em] p-2 text-center font-extrabold">Aspiring Software
-          Developer.<br /> I can't be bothered to write something good. </h3>
-        <section id="header-icons">
-          <a href="https://github.com/Eshan05" target="_blank" class="text-[1.25em] hover:text-[#6e5494]" title="Only this and Linkedin works"><i
-              class="fa-brands fa-github"></i></a>
-          <a href="https://www.linkedin.com/in/eshann7" target="_blank" class="text-[1.25em] hover:text-[#0a66c2]"><i
-              class="fa-brands fa-linkedin"></i></a>
-          <a href="https://twitter.com/Name" target="_blank" class="text-[1.25em] hover:text-[#1da1f2]"><i
-              class="fa-brands fa-twitter"></i></a>
-          <a href="https://www.instagram.com/Name" target="_blank" class="text-[1.25em] hover:text-[#c13584]"><i
-              class="fa-brands fa-instagram"></i></a>
-          <a href="https://www.facebook.com/Name" target="_blank" class="text-[1.25em] hover:text-[#1877f2]"><i
-              class="fa-brands fa-facebook"></i></a>
-          <a href="https://www.youtube.com/channel/Name" target="_blank" class="text-[1.25em] hover:text-[#ff0000] hover:scale-110"><i
-              class="fa-brands fa-youtube"></i></a>
+          class="font-['Prata'] text-transparent bg-clip-text bg-gradient-to-r from-[#a4e9f9] via-[#c5aef2] to-[#8578ea] text-[2em] mt-3 tracking-wide">
+          Eshan </h1>
+        <!-- <h2 class="font-['Prata'] text-transparent bg-clip-text font-thin text-[2em] mt-3"> Undergraduate Student </h2> -->
+        <article class="lg:w-3/4 md:w-[80%] w-[60%] text-[#cecece] text-[.5em]">
+          <h2 class="xl:!text-base p-2 text-center font-extrabold"> Aspiring Software Developer and Sophomore CS
+            Student.<br /> Currently a SDE Intern at Salesine Technologies. </h2>
+          <h3 class="xl:!text-base p-2 text-center hidden md:block text-[#aaa] w-1/2 mx-auto"> Here, you'll find quick
+            access to my recent projects, some fairly important stuff and other things. Learning DSA and upskilling in
+            full stack. Feel free to connect with me! </h3>
+          <h3 class="p-2 text-center md:hidden text-[#aaa]"> Here, you'll find quick access to my recent projects, some
+            fairly important stuff and other things. Learning DSA and upskilling in full stack. Feel free to connect
+            with me! </h3>
+        </article>
+        <section id="header-icons" class="text-[1.25em]">
+          <!-- <a href=" https://www.instagram.com/" target="_blank" class="hover:text-[#c13584] text-center bg-[#47223b88]"
+            title="Instagram"><i class="fa-brands fa-instagram text-[#ff71b1]"></i></a> -->
+          <a href="https://github.com/Eshan05" target="_blank" class="hover:text-[#6e5494] text-center bg-[#41276188]"
+            title="GitHub"><i class="fa-brands fa-github text-[#EA9DFF]"></i></a>
+          <a href="https://www.linkedin.com/in/eshann7" target="_blank"
+            class="hover:text-[#0a66c2] text-center bg-[#002b3d88]" title="LinkedIn"><i
+              class="fa-brands fa-linkedin text-[#61caff]"></i></a>
+          <!-- <a href="https://chat.whatsapp.com/" target="_blank"
+            class="hover:text-[#0a66c2] text-center bg-[#00321c]" title="WhatsApp"><i
+              class="fa-brands fa-whatsapp text-[#43f78e]"></i></a> -->
+          <a href="https://leetcode.com/" target="_blank" class="hover:text-[#0a66c2] text-center bg-[#3e320ebb]"
+            title="Leetcode"><svg xmlns="http://www.w3.org/2000/svg" width=".9em" height=".9em" viewBox="0 0 24 24">
+              <path fill="#ffd061"
+                d="M13.483 0a1.37 1.37 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.3 5.3 0 0 0-1.209 2.104a5 5 0 0 0-.125.513a5.5 5.5 0 0 0 .062 2.362a6 6 0 0 0 .349 1.017a5.9 5.9 0 0 0 1.271 1.818l4.277 4.193l.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.38 1.38 0 0 0-1.951-.003l-2.396 2.392a3.02 3.02 0 0 1-4.205.038l-.02-.019l-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.7 2.7 0 0 1 .066-.523a2.55 2.55 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0m-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382a1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382a1.38 1.38 0 0 0-1.38-1.382z" />
+            </svg></a>
+          <!-- <a href="https://x.com/" target="_blank"
+            class="hover:text-[#0a66c2] text-center bg-[#00321c] grayscale" title="X"><i
+              class="fa-brands fa-x-twitter text-[#43f78e]"></i></a> -->
+          <a href="https://discord.com/" target="_blank" class="hover:text-[#0a66c2] text-center bg-[#6f74da33]"
+            title="Discord"><i class="fa-brands fa-discord text-[#9094ffdd] text-[0.9em]"></i></a>
         </section>
       </header>
-      <!--  -->
-      <!--  -->
-      <!--  -->
       <section id="links" class="flex items-center justify-center flex-col mt-5 md:w-[33%] w-[100%]">
         <h4 class="tracking-[.25em] xl:text-[.5em] text-[.55em] text-[#aaa] mb-2 md:mb-3">Web</h4>
         <a href="#" target="_blank"
           class="btn backdrop-blur bg-[#2226] w-[100%] lg:py-4 xl:text-[.55em] text-[.67em] lg:max-w-[600px] md:max-w-[400px] border border-[#5555] rounded lg:px-6 md:py-2 md:px-3 p-3 max-w-[57.5%] shadow-md mb-1 lg:mb-3">
-          <i class="fa-solid fa-globe"></i>
+          <i class="fa-solid fa-globe text-indigo-300"></i>
           <span>Personal Website</span>
           <i class="fa-solid fa-ellipsis-vertical"></i>
         </a>
         <a href="#" target="_blank"
-          class="large-btn backdrop-blur bg-[url('leettype.png')] bg-cover w-[100%] lg:py-4 xl:text-[.55em] text-[.67em] lg:max-w-[600px] md:max-w-[400px] border border-[#5555] rounded-xl lg:px-6 md:py-2 md:px-3 p-3 max-w-[57.5%] shadow-md mb-1 lg:mb-3">
-          <i class="fa-solid fa-keyboard text-[#1d976c]"></i>
-          <span>LeetType</span>
-
+          class="large-btn backdrop-blur bg-cover w-[100%] lg:py-4 xl:text-[.55em] text-[.67em] lg:max-w-[600px] md:max-w-[400px] border border-[#5555] rounded-xl lg:px-6 md:py-2 md:px-3 p-3 max-w-[57.5%] shadow-md mb-1 lg:mb-3"
+          style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url('images/f9VxJTzDPl.png');">
+          <i class="fa-solid fa-user text-zinc-500"></i>
+          <span>Smart Alumni Hub</span>
           <i class="fa-solid fa-ellipsis-vertical"></i>
         </a>
         <a href="#" target="_blank" title="Can't be bothered"
@@ -67,46 +99,65 @@
         <!--  -->
         <!--  -->
         <h4 class="tracking-[.25em] xl:text-[.5em] text-[.55em] text-[#aaa] my-2 md:mb-3">Collaborations</h4>
-        <a href="#" target="_blank"
-          class="btn backdrop-blur bg-[#2226] w-[100%] lg:py-4 xl:text-[.55em] text-[.67em] lg:max-w-[600px] md:max-w-[400px] border border-[#5555] rounded lg:px-6 md:py-2 md:px-3 p-3 max-w-[57.5%] shadow-md mb-1 lg:mb-3">
-          <i class="fa-solid fa-bullseye text-[#f1c40f]"></i>
-          <span>PrepQuest</span>
-        </a>
-        <a href="#" target="_blank"
-          class="btn backdrop-blur bg-[#2226] w-[100%] lg:py-4 xl:text-[.55em] text-[.67em] lg:max-w-[600px] md:max-w-[400px] border border-[#5555] rounded lg:px-6 md:py-2 md:px-3 p-3 max-w-[57.5%] shadow-md mb-1 lg:mb-3">
-          <i class="fa-solid fa-chess text-[wheat]"></i>
-          <span>Chess Zenith</span>
-        </a>
-        <a href="#" target="_blank"
-          class="btn backdrop-blur bg-[#2226] w-[100%] lg:py-4 xl:text-[.55em] text-[.67em] lg:max-w-[600px] md:max-w-[400px] border border-[#5555] rounded lg:px-6 md:py-2 md:px-3 p-3 max-w-[57.5%] shadow-md mb-1 lg:mb-3">
-          <i class="fa-solid fa-image text-[#545ff4]"></i>
-          <span>ImageScope</span>
-        </a>
-        <a href="#" target="_blank"
-          class="btn backdrop-blur bg-[#2226] w-[100%] lg:py-4 xl:text-[.55em] text-[.67em] lg:max-w-[600px] md:max-w-[400px] border border-[#5555] rounded lg:px-6 md:py-2 md:px-3 p-3 max-w-[57.5%] shadow-md mb-1 lg:mb-3">
-          <i class="fa-solid fa-robot"></i>
-          <span>AI Assisted Task Manager</span>
-        </a>
-        <a href="#" target="_blank"
-          class="btn backdrop-blur bg-[#2226] w-[100%] lg:py-4 xl:text-[.55em] text-[.67em] lg:max-w-[600px] md:max-w-[400px] border border-[#5555] rounded lg:px-6 md:py-2 md:px-3 p-3 max-w-[57.5%] shadow-md mb-1 lg:mb-3">
-          <i class="fa-solid fa-globe"></i>
-          <span></span>
-        </a>
         <!--  -->
         <!--  -->
         <!--  -->
         <h4 class="tracking-[.25em] xl:text-[.5em] text-[.55em] text-[#aaa] my-2 md:mb-3">Other</h4>
-        <a href="#" target="_blank"
-          class="btn backdrop-blur bg-[#2226] w-[100%] lg:py-4 xl:text-[.55em] text-[.67em] lg:max-w-[600px] md:max-w-[400px] border border-[#5555] rounded lg:px-6 md:py-2 md:px-3 p-3 max-w-[57.5%] shadow-md mb-1 lg:mb-3">
-          <i class="fa-solid fa-globe"></i>
-          <span></span>
-        </a>
       </section>
       <footer class="mt-5">
-        <h3 style="color: #888;" class="xl:!text-base text-[.5em] p-2 text-center font-extrabold">Made by Eshan </h3>
+        <h3 class="xl:!text-base text-[.5em] p-2 text-center font-extrabold text-[#aaa]"> Made by Eshan </h3>
       </footer>
     </main>
   </body>
   <script src="./script.js"></script>
+  <script>
+    window.onload = function () {
+      const welcomeScreen = document.getElementById('welcome-screen');
+      const welcomeText = document.getElementById('welcome-text');
+      const mainContent = document.querySelector('main');
+
+      welcomeText.style.opacity = 1;
+      const textArray = welcomeText.innerText.split('');
+      welcomeText.innerHTML = '';
+
+      textArray.forEach((letter, index) => {
+        const span = document.createElement('span');
+        span.innerText = letter;
+        welcomeText.appendChild(span);
+        gsap.fromTo(span, {
+          opacity: 0,
+        }, {
+          opacity: 1,
+          duration: 0.5,
+          delay: index * 0.1,
+          ease: "bounce.out"
+        });
+      });
+
+      // Step 3: Slide up the welcome screen after a delay
+      setTimeout(() => {
+        gsap.to(welcomeScreen, {
+          y: '-100%',
+          duration: 0.7,
+          ease: "power2.inOut",
+          onComplete: () => {
+            // Show the main content
+            welcomeScreen.style.display = 'none';
+            mainContent.style.display = 'flex';
+
+            // Animate each main content element
+            const elements = mainContent.children;
+            gsap.fromTo(elements, { y: '100%', opacity: 0 }, {
+              y: '0%',
+              opacity: 1,
+              duration: 0.5,
+              stagger: 0.3,
+              ease: "power2.out" // Smooth easing for the main content
+            });
+          }
+        });
+      }, (textArray.length * 100) + 1000); // Delay to allow for text animation
+    };
+  </script>
 
 </html>

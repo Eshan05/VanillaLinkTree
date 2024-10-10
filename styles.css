@@ -1,6 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Prata&family=Oswald&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
-
 *,
 *::after,
 *::before {
@@ -9,19 +6,19 @@
   padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
   scrollbar-width: none;
   min-height: min-content;
+  text-rendering: optimizeSpeed;
+  overflow-x: hidden;
+
 }
 
 body {
   color: white;
-  font-family: 'DM Sans';
+  font-family: "DM Sans";
   font-weight: 500;
   min-height: 100svh;
-  background: url('bg.png') no-repeat, hsl(202, 24%, 7%);
-  background-size: 100%;
-  background-position: -50vh 10%;
+  background: url("images/bg.png") no-repeat -50vh 10% / 100%, hsl(202, 24%, 8%);
 }
 
 @media screen and (max-width: 768px) {
@@ -31,7 +28,7 @@ body {
   }
 }
 
-/*
+/* 
 main {
   display: flex;
   flex-direction: column;
@@ -61,12 +58,33 @@ a {
 
 #header-icons {
   display: flex;
-  gap: 1em;
+  gap: 1em .75em;
   align-items: center;
   justify-content: center;
-  margin-top: .5em;
+  margin-top: 0.5em;
   scrollbar-width: none;
+
+  & a {
+    height: 1.33em;
+    /* line-height: 1.33em; */
+    display: grid;
+    place-items: center;
+    aspect-ratio: 1/1;
+    border-radius: .25em;
+    /* filter: grayscale(1); */
+  }
+
+  & i {
+    display: inline-block;
+    width: 100%;
+  }
 }
+
+/* h1 {
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px currentColor;
+} */
 
 #links {
   & a {
@@ -74,44 +92,47 @@ a {
     color: gainsboro;
     align-items: center;
     position: relative;
-    transition: .3s all ease-in-out;
-    gap: .25em;
-    text-shadow: 0 0 1px rgba(155, 155, 155, .6);
+    transition: 0.3s all ease-in-out;
+    gap: 0.25em;
+    text-shadow: 0 0 1px rgba(155, 155, 155, 0.6);
 
     & i {
-      padding-inline-end: .5em;
-      padding: .25em .5em .25em .05em;
+      padding-inline-end: 0.5em;
+      padding: 0.25em 0.5em 0.25em 0.05em;
       display: inline-block;
-      font-size: .8em;
+      font-size: 0.8em;
       height: max-content;
+      width: 2em;
     }
   }
-  /*
-  & a::after {
-    font-family: FontAwesome;
+
+
+  /* & a::after {
+    font-sfamily: FontAwesome;
     content: '\f08e';
     font-size: .67em;
     margin-left: auto;
     padding-inline-start: .5em;
-  }
-  */
+  } */
   & span {
     position: relative;
   }
+
   & h4 {
     font-variant: small-caps;
     position: relative;
   }
 
   & a:hover {
-    transform: scale(.92);
+    transform: scale(0.92);
     transform: translateY(-0.2rem);
     color: white;
   }
-  & a > i:nth-of-type(2) {
+
+  & a>i:nth-of-type(2) {
     position: absolute;
     right: 1em;
-    padding: .3em .667em;
+    padding: 0.3em 0.667em;
     background-color: #1111;
     border-radius: 50%;
     z-index: 10;
@@ -119,17 +140,20 @@ a {
 }
 
 #links:has(a:hover) a:not(:hover) {
-  opacity: .8;
+  opacity: 0.8;
 }
 
 main #links a.large-btn {
   height: 15em;
-  align-items: center;
   display: flex;
+  align-items: center;
   overflow: visible;
+
   & i {
     align-self: flex-end;
+    line-height: 1.33;
   }
+
   & span {
     align-self: flex-end;
   }
@@ -141,46 +165,54 @@ main #links a.large-btn {
 */
 
 .modal {
-  backdrop-filter: blur(.25em);
+  backdrop-filter: blur(0.25em);
+
   & ul {
     display: flex;
     flex-direction: column;
-    gap: .5em;
+    gap: 0.5em;
     list-style: none;
     padding: 1em;
-    border: 1px solid rgba(80, 80, 80, .6)x;
-    border-radius: .25em;
+    border: 1px solid rgba(80, 80, 80, 0.6) x;
+    border-radius: 0.25em;
     max-width: 628px;
     width: 33%;
+
     & li {
       display: flex;
-      gap: .5em;
+      gap: 0.5em;
       align-items: center;
-      justify-content: flex-start;
       border-radius: inherit;
       background-color: #4443;
       cursor: pointer;
-      padding: .25em .5em;
-      border: 2px solid rgba(80, 80, 80, .6);
-      & a, button {
-        font-size: .5em;
+      padding: 0.25em 0.5em;
+      border: 2px solid rgba(80, 80, 80, 0.6);
+      width: 100%;
+
+      & a,
+      button {
+        font-size: 0.5em;
+        width: 100%;
       }
+
       & i {
-        padding: .125em;
-        width: 1.25em;
+        padding: 0.125em;
         height: 1.25em;
+        aspect-ratio: 1/1;
         display: grid;
-        border-radius: .5rem;
+        border-radius: 0.5rem;
         color: attr(data-color);
         place-items: center;
       }
     }
-    & li::after {
+
+    & li:not(:last-of-type):after {
       font-family: FontAwesome;
-      content: '\f08e';
-      font-size: .33em;
+      content: "\f08e";
+      font-size: 0.33em;
       margin-left: auto;
-      padding-inline-start: .5em;
+      padding-inline-start: 0.5em;
+      flex-shrink: 0;
     }
   }
 }
